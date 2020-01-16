@@ -1,0 +1,6 @@
+---
+consumers:
+- username: ifood_app
+  hmacauth_credentials:
+  - username: v9.3.0
+    secret: ${IFOOD_APP_9_3_0}

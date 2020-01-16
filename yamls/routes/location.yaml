@@ -1,0 +1,17 @@
+---
+routes:
+- name: location
+  service: httpbin
+  regex_priority: 1
+  hosts: []
+  methods: []
+  preserve_host: true
+  strip_path: true
+  paths:
+  - "/location"
+  plugins:
+  - name: hmac-auth
+    config:
+      enforce_headers: 
+      - request-line
+      clock_skew: 30
